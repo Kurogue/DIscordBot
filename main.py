@@ -48,7 +48,7 @@ async def on_message(message):
         await message.channel.send(Karams)
 
     if 'rubel' in message.content.lower():
-        Rubels = random.choice(Yalcin)
+        Rubels = random.choice(Rubel)
         await message.channel.send(Rubels)
 
 keep_alive()
