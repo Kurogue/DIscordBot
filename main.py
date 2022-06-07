@@ -17,7 +17,7 @@ Karam=["\"No one uses kmaps, in-fact, no one uses quine-mccluskey\" - Dr. Karam 
 
 Rubel=["\"Most of us have 10 fingers if you have more that's not normal\" - Dr. Rubel 05/31/2022", "\"Okay I think we have enough information about this subject.\" - Dr. Rubel 05/31/2022"]
 
-profs=["$beasley", "$theado", "$yalcin", "$karam", "$rubel"]
+# profs=["$beasley", "$theado", "$yalcin", "$karam", "$rubel"]
 
 @client.event 
 async def on_ready():
@@ -31,44 +31,40 @@ async def on_message(message):
     if '$quote' in message.content.lower():
         quote = random.choice(quotes)
         await message.channel.send(quote)
-        
-    elif '$beasley' in message.content.lower() and not('$theado' in message.content.lower() or '$yalcin' in message.content.lower() or '$karam' in message.content.lower() or '$rubel' in message.content.lower()):
+    elif '$beasley' in message.content.lower():
         Beasleys = random.choice(Beasley)
         await message.channel.send(Beasleys)
-    
-    elif '$theado' in message.content.lower() and not('$beasley' in message.content.lower() or '$theado' in message.content.lower() or '$yalcin' in message.content.lower() or '$karam' in message.content.lower() or '$rubel' in message.content.lower()):
+    elif '$theado' in message.content.lower():
         Theados = random.choice(Theado)
         await message.channel.send(Theados)
-    
-    elif '$yalcin' in message.content.lower() and not('$beasley' in message.content.lower() or '$theado' in message.content.lower() or '$karam' in message.content.lower() or '$rubel' in message.content.lower()):
+    elif '$yalcin' in message.content.lower():
         Yalcins = random.choice(Yalcin)
         await message.channel.send(Yalcins)
-    
-    elif '$karam' in message.content.lower() and not('$beasley' in message.content.lower() or '$theado' in message.content.lower() or '$yalcin' in message.content.lower() or '$rubel' in message.content.lower()):
+    elif '$karam' in message.content.lower():
         Karams = random.choice(Karam)
         await message.channel.send(Karams)
-    
-    elif '$rubel' in message.content.lower() and not('$beasley' in message.content.lower() or '$theado' in message.content.lower() or '$yalcin' in message.content.lower() or '$karam' in message.content.lower()):
+    elif '$rubel' in message.content.lower():
         Rubels = random.choice(Rubel)
         await message.channel.send(Rubels)
     
-    elif any(word in message.conetnet.lower() for word in profs):
-         prof = random.choice(profs)
-         if prof == '$beasley':
-             quote = random.choice(Beasley)
-             await message.channel.send(quote)
-         elif prof == '$theado':
-             quote = random.choice(Theado)
-             await message.channel.send(quote)
-         elif prof == '$yalcin':
-             quote = random.choice(Yalcin)
-             await message.channel.send(quote)
-         elif prof == '$karam':
-             quote = random.choice(Karam)
-             await message.channel.send(quote)
-         elif prof == '$rubel':
-             quote = random.choice(Rubel)
-             await message.channel.send(quote)
+    # elif any(word in message.conetnet.lower() for word in profs):
+    #      prof = random.choice(profs)
+    #      if prof == '$beasley':
+    #          quote = random.choice(Beasley)
+    #          await message.channel.send(quote)
+    #      elif prof == '$theado':
+    #          quote = random.choice(Theado)
+    #          await message.channel.send(quote)
+    #      elif prof == '$yalcin':
+    #          quote = random.choice(Yalcin)
+    #          await message.channel.send(quote)
+    #      elif prof == '$karam':
+    #          quote = random.choice(Karam)
+    #          await message.channel.send(quote)
+    #      elif prof == '$rubel':
+    #          quote = random.choice(Rubel)
+    #          await message.channel.send(quote)
+    # and not('$beasley' in message.content.lower() or '$theado' in message.content.lower() or '$yalcin' in message.content.lower() or '$karam' in message.content.lower() or '$rubel' in message.content.lower())
 
 keep_alive()
 client.run(os.getenv('TOKEN'))
