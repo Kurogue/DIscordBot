@@ -12,3 +12,6 @@ Added the feature where you cannot abuse sending a message with multiple flags. 
 
 #### V1.3
 Added slash commands to remove the unecessary spam of the bot when not wanted and to not inturrupt conversations.
+
+#### V1.4
+I had to dumb the bot back down for the sake of the server as to not try and overload it with trying to scan every message sent if it does contain a specific professor. The bot still does only send 1 message per user and now uses `$` instead of slashes.
