@@ -11,4 +11,4 @@ Thanks for reading and have fun.
 Added the feature where you cannot abuse sending a message with multiple flags. Lets say that you send a message of multiple professors it would send multiple messages from the database of each professor listed. That has been fixed and limited to one professor chosed at random. It does not yet have the feature to choose a random professor that was stated in the message, this is being worked on.
 
 #### V1.3
-Added slash commands to remove the unecessary spam of the bot when not wanted.
+Added slash commands to remove the unecessary spam of the bot when not wanted and to not inturrupt conversations.
